@@ -10,7 +10,7 @@ GO
 GO
     CREATE TABLE FOTO(
         id                        CHAR      (10) PRIMARY KEY NOT NULL,
-        foto                      VARBINARY (MAX)            NOT NULL,
+        foto                      VARBINARY (MAX)                    ,
         id_ejemplar               CHAR      (10)             NOT NULL
     );
 GO
@@ -36,7 +36,7 @@ GO
         id_idioma                 CHAR      (10)             NOT NULL,
         id_formato                CHAR      (10)             NOT NULL,
         id_palabra_clave          CHAR      (10)             NOT NULL,
-        id_foto                   CHAR      (10)             NOT NULL,
+        id_foto                   CHAR      (10)                     ,
         id_editorial              CHAR      (10)             NOT NULL
     );
 GO
@@ -61,7 +61,6 @@ GO
 GO
     CREATE TABLE MATERIAL_BIBLIOGRAFICO(
         id                        CHAR      (10) PRIMARY KEY NOT NULL,
-        tipo                      VARCHAR   (20)             NOT NULL,
         id_coleccion              CHAR      (10)             NOT NULL
     );
 GO
@@ -97,9 +96,10 @@ GO
 GO
     CREATE TABLE IMAGEN (
     id                            CHAR      (10) PRIMARY KEY NOT NULL,
-    imagen                        VARBINARY (MAX)            NOT NULL,
+    imagen                        VARBINARY (MAX)                    ,
     id_evento                     CHAR      (10)             NOT NULL
     );
+GO
     CREATE TABLE RESERVA_LIBRO (
     id_material_bibliografico     CHAR      (10)             NOT NULL,
     id_cliente                    CHAR      (10)             NOT NULL,
@@ -123,13 +123,7 @@ GO
     CREATE TABLE ADMINISTRADOR (
     id                            CHAR      (10) PRIMARY KEY NOT NULL,
     Nombre                        VARCHAR   (25)             NOT NULL,
-    Contraseña                    VARCHAR   (20)             NOT NULL,
-    id_Tipo                       CHAR      (10)             NOT NULL
-    );
-GO
-    CREATE TABLE TIPO_USUARIO (
-    id                            CHAR      (10) PRIMARY KEY NOT NULL,
-    Tipo                          VARCHAR   (20)             NOT NULL,
+    Contraseña                    VARCHAR   (20)             NOT NULL
     );
 GO
     CREATE TABLE RESERVA_EVENTO (
@@ -154,29 +148,19 @@ GO
     id_administrador              CHAR      (10)             NOT NULL
     );
 GO
-    CREATE TABLE USUARIO (
-    id                            CHAR      (10) PRIMARY KEY NOT NULL,
+    CREATE TABLE CLIENTE (
+    id                           CHAR       (10) PRIMARY KEY NOT NULL,
+    nombre_usuario               VARCHAR    (25)             NOT NULL,
+    Contraseña                   VARCHAR    (20)             NOT NULL,  
     Nombre                        VARCHAR   (25)             NOT NULL,
-    Fotografia                    VARBINARY (MAX)            NOT NULL,
+    Fotografia                    VARBINARY (MAX)                    ,
     Email                         VARCHAR   (30)             NOT NULL,
     Direccion                     VARCHAR   (100)            NOT NULL,
     Telefono                      CHAR      (13)             NOT NULL,
     id_Institucion                CHAR      (10)             NOT NULL,
     id_Ocupacion                  CHAR      (10)             NOT NULL
     );
-GO
-    CREATE TABLE CLIENTE (
-    id                           CHAR       (10) PRIMARY KEY NOT NULL,
-    nombre                       VARCHAR    (25)             NOT NULL,
-    Contraseña                   VARCHAR    (20)             NOT NULL,  
-    );
-GO
-    CREATE TABLE INFO (
-    id_cliente                    CHAR      (10)             NOT NULL,
-    id_usuario                    CHAR      (10)             NOT NULL,
-    id_administrador              CHAR      (10)             NOT NULL
 
-    );
 --FKS
 GO
 ALTER TABLE EJEMPLAR               ADD FOREIGN KEY (id_idioma)                       REFERENCES IDIOMA (id);
@@ -215,10 +199,8 @@ ALTER TABLE GESTIONA_UA            ADD CONSTRAINT pk_gestiona_UA                
 ALTER TABLE GESTIONA_UA            ADD FOREIGN KEY (id_administrador)                REFERENCES ADMINISTRADOR (id);
 ALTER TABLE GESTIONA_UA            ADD FOREIGN KEY (id_cliente)                      REFERENCES CLIENTE (id);
 GO
-ALTER TABLE USUARIO                ADD FOREIGN KEY (id_Institucion)                  REFERENCES INSTITUCION (id);
-ALTER TABLE USUARIO                ADD FOREIGN KEY (id_Ocupacion)                    REFERENCES OCUPACION (id);
-GO
-ALTER TABLE ADMINISTRADOR          ADD FOREIGN KEY (id_tipo)                         REFERENCES TIPO_USUARIO (id);
+ALTER TABLE CLIENTE                ADD FOREIGN KEY (id_Institucion)                  REFERENCES INSTITUCION (id);
+ALTER TABLE CLIENTE                ADD FOREIGN KEY (id_Ocupacion)                    REFERENCES OCUPACION (id);
 GO
 ALTER TABLE RESERVA_EVENTO         ADD CONSTRAINT pk_reserva_evento                  PRIMARY KEY (id_evento, id_cliente);
 ALTER TABLE RESERVA_EVENTO         ADD FOREIGN KEY (id_evento)                       REFERENCES EVENTO (id);
@@ -233,8 +215,4 @@ ALTER TABLE EVENTO                 ADD FOREIGN KEY (id_Imagenes)                
 ALTER TABLE IMAGEN                 ADD FOREIGN KEY (id_evento)                       REFERENCES EVENTO (id);
 GO
 ALTER TABLE FOTO                   ADD FOREIGN KEY (id_ejemplar)                     REFERENCES EJEMPLAR (id);
-GO
-ALTER TABLE INFO                   ADD CONSTRAINT pk_info_usuario                    PRIMARY KEY (id_usuario,id_administrador,id_cliente);
-ALTER TABLE INFO                   ADD FOREIGN KEY (id_usuario)                      REFERENCES USUARIO (id);
-ALTER TABLE INFO                   ADD FOREIGN KEY (id_administrador)                REFERENCES ADMINISTRADOR (id);
-ALTER TABLE INFO                   ADD FOREIGN KEY (id_cliente)                      REFERENCES CLIENTE (id);
+
