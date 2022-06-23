@@ -1,5 +1,6 @@
 USE BINAES
 GO 
+--POBLACION BIBLIOTECA
 insert into IDIOMA (id, idioma) values (1, 'Español');
 insert into IDIOMA (id, idioma) values (2, 'Ingles');
 GO
@@ -24,5 +25,10 @@ GO
 insert into PISO (id,piso) values (1,1);
 GO
 insert into AREA (id,nombre,descripcion,id_piso,id_material_bibliografico) values (1,'biblioteca','descripcion',1,1);
+GO
+--ADMINISTRADOR
 
-
+insert into ADMINISTRADOR (Id, Nombre, Contraseña) values (1, 'Richard', 'X3sq8SAqaT');
+insert into ADMINISTRADOR (Id, Nombre, Contraseña) values (2, 'Robles', 'oRIGXF1R');
+insert into ADMINISTRADOR (Id, Nombre, Contraseña) values (3, 'Alejo', 'SHwQOct7');
+insert into ADMINISTRADOR (Id, Nombre, Contraseña) values (4, 'Tony', 'qSLXjEX2e');
