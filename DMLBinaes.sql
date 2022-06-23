@@ -285,10 +285,10 @@ insert into INSTITUCION (Id, Nombre) values (20, 'Einti');
 
 --Administrador
 
-insert into ADMINISTRADOR (Id, Nombre, Contraseña, Id_Tipo) values (1, 'Richard', 'X3sq8SAqaT', 1);
-insert into ADMINISTRADOR (Id, Nombre, Contraseña, Id_Tipo) values (2, 'Robles', 'oRIGXF1R', 2);
-insert into ADMINISTRADOR (Id, Nombre, Contraseña, Id_Tipo) values (3, 'Alejo', 'SHwQOct7', 1);
-insert into ADMINISTRADOR (Id, Nombre, Contraseña, Id_Tipo) values (4, 'Tony', 'qSLXjEX2e', 2);
+insert into ADMINISTRADOR (Id, Nombre, Contraseña) values (1, 'Richard', 'X3sq8SAqaT');
+insert into ADMINISTRADOR (Id, Nombre, Contraseña) values (2, 'Robles', 'oRIGXF1R');
+insert into ADMINISTRADOR (Id, Nombre, Contraseña) values (3, 'Alejo', 'SHwQOct7');
+insert into ADMINISTRADOR (Id, Nombre, Contraseña) values (4, 'Tony', 'qSLXjEX2e');
 
 --Tipo
 
