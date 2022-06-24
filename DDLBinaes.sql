@@ -9,7 +9,7 @@ GO
 GO
     CREATE TABLE FOTO(
         id                        CHAR      (100) PRIMARY KEY NOT NULL,
-        foto                      VARBINARY (MAX)                    ,
+        foto                      VARBINARY (MAX)                     ,
         id_ejemplar               CHAR      (100)             NOT NULL
     );
 GO
@@ -28,12 +28,12 @@ GO
         idioma                    VARCHAR   (100)             NOT NULL
     );
 GO
-CREATE TABLE AUTOR(
+    CREATE TABLE AUTOR(
         id                        CHAR      (100) PRIMARY KEY NOT NULL,
         nombre                    VARCHAR   (100)             NOT NULL
     );
 GO
-CREATE TABLE ETIQUETA(
+    CREATE TABLE ETIQUETA(
         id                        CHAR      (100) PRIMARY KEY NOT NULL,
         etiqueta                  VARCHAR   (100)             NOT NULL
     );
@@ -138,7 +138,6 @@ GO
     Nombre                        VARCHAR   (100)             NOT NULL,
     Contraseña                    VARCHAR   (100)             NOT NULL
     );
-GOGH
     CREATE TABLE RESERVA_EVENTO (
     id_evento                     CHAR      (100)             NOT NULL,
     id_cliente                    CHAR      (100)             NOT NULL,
