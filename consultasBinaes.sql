@@ -1,6 +1,6 @@
 USE BINAES
-
-SELECT Ej.Nombre as 'libro',fo.formato,pc.palabra_clave,ed.nombre as 'editorial',co.nombre_coleccion
+GO
+SELECT Ej.Nombre as 'libro',fo.formato,pc.palabra_clave,ed.nombre as 'editorial',co.nombre_coleccion,Ge.genero
 FROM EJEMPLAR Ej
 INNER JOIN IDIOMA id 
 ON ej.id_idioma=id.id
@@ -12,6 +12,8 @@ INNER JOIN EDITORIAL ed
 ON ed.id=Ej.id_editorial
 INNER join COLECCION co 
 ON co.id_ejemplar=Ej.id
+INNER JOIN GENERO Ge 
+on co.id_genero=Ge.id
 
 
 

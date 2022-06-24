@@ -4,8 +4,7 @@ USE BINAES
 GO
     CREATE TABLE PALABRAS_CLAVE (
         id                        CHAR      (10) PRIMARY KEY NOT NULL,
-        palabra_clave             VARCHAR   (20)             NOT NULL,
-        id_ejemplar               CHAR      (10)             NOT NULL
+        palabra_clave             VARCHAR   (20)             NOT NULL
     );
 GO
     CREATE TABLE FOTO(
@@ -165,7 +164,6 @@ GO
 GO
 ALTER TABLE EJEMPLAR               ADD FOREIGN KEY (id_idioma)                       REFERENCES IDIOMA (id);
 ALTER TABLE EJEMPLAR               ADD FOREIGN KEY (id_formato)                      REFERENCES FORMATO (id);
-ALTER TABLE EJEMPLAR               ADD FOREIGN KEY (id_palabra_clave)                REFERENCES PALABRAS_CLAVE (id);
 ALTER TABLE EJEMPLAR               ADD FOREIGN KEY (id_foto)                         REFERENCES EJEMPLAR (id);
 ALTER TABLE EJEMPLAR               ADD FOREIGN KEY (id_editorial)                    REFERENCES EDITORIAL (id);
 GO
