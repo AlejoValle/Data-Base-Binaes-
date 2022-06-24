@@ -12,8 +12,8 @@ GO
 insert into EDITORIAL (id, nombre) values (1, 'Santillana');
 insert into EDITORIAL (id, nombre) values (2, 'Gobierno');
 GO
-insert into EJEMPLAR (id,Nombre,fecha_publicacion,id_idioma,id_formato,id_palabra_clave,id_editorial) 
-values (1,'Camasutra',CONVERT (DATE, '08/12/2001',103),2,1,1,1);
+--insert into EJEMPLAR (id,Nombre,fecha_publicacion,id_idioma,id_formato,id_palabra_clave,id_editorial) 
+--values (1,'Camasutra',CONVERT (DATE, '08/12/2001',103),2,1,1,1);
 GO
 insert into TIPO (id,tipo) values (1,'libro');
 GO
@@ -25,7 +25,7 @@ insert into MATERIAL_BIBLIOGRAFICO (id,id_coleccion) values (1,1);
 GO
 insert into PISO (id,piso) values (1,1);
 GO
-insert into AREA (id,nombre,descripcion,id_piso,id_material_bibliografico) values (1,'biblioteca','descripcion',1,1);
+--insert into AREA (id,nombre,descripcion,id_piso,id_material_bibliografico) values (1,'biblioteca','descripcion',1,1);
 
 insert into PALABRAS_CLAVE (id, palabra_clave) values ('id4916', 'bidireccional');
 insert into PALABRAS_CLAVE (id, palabra_clave) values ('id3113', 'estructura');
@@ -148,7 +148,112 @@ insert into EDITORIAL (id, nombre) values ('id3387', 'Imprenta Angel Editores');
 insert into EDITORIAL (id, nombre) values ('id3493', 'Editorial Lo Nuestro');
 insert into EDITORIAL (id, nombre) values ('id4756', 'ESE EDICIONES');
 GO
+insert into AUTORES (id, nombre) values ('00219100', 'Belita McDougal');
+insert into AUTORES (id, nombre) values ('00219101', 'Antone Ughetti');
+insert into AUTORES (id, nombre) values ('00219102', 'Aloysius Mirfin');
+insert into AUTORES (id, nombre) values ('00219103', 'Boniface Thurby');
+insert into AUTORES (id, nombre) values ('00219104', 'Evy Skaife');
+insert into AUTORES (id, nombre) values ('00219105', 'Theodor Rickesies');
+insert into AUTORES (id, nombre) values ('00219106', 'Whitby Besse');
+insert into AUTORES (id, nombre) values ('00219107', 'Meara Danilishin');
+insert into AUTORES (id, nombre) values ('00219108', 'Brice Dubbin');
+insert into AUTORES (id, nombre) values ('00219109', 'Rosella Girardetti');
+insert into AUTORES (id, nombre) values ('00219110', 'Cassandra Bulloch');
+insert into AUTORES (id, nombre) values ('00219111', 'Abey Stummeyer');
+insert into AUTORES (id, nombre) values ('00219112', 'Lanie O'' Cloney');
+insert into AUTORES (id, nombre) values ('00219113', 'Gideon Rosas');
+insert into AUTORES (id, nombre) values ('00219114', 'Sheelah Speachley');
+insert into AUTORES (id, nombre) values ('00219115', 'Judye Hoy');
+insert into AUTORES (id, nombre) values ('00219116', 'Giorgi Heardman');
+insert into AUTORES (id, nombre) values ('00219117', 'Bear Soppit');
+insert into AUTORES (id, nombre) values ('00219118', 'Stu Dreher');
+insert into AUTORES (id, nombre) values ('00219119', 'Gaelan Rackam');
+insert into AUTORES (id, nombre) values ('00219120', 'Merridie Ballam');
+insert into AUTORES (id, nombre) values ('00219121', 'Boniface Tweedlie');
+insert into AUTORES (id, nombre) values ('00219122', 'Maryann Avon');
+insert into AUTORES (id, nombre) values ('00219123', 'Zonnya Magrane');
+insert into AUTORES (id, nombre) values ('00219124', 'Nerti MacAlaster');
+insert into AUTORES (id, nombre) values ('00219125', 'Muriel Dumphries');
+insert into AUTORES (id, nombre) values ('00219126', 'Tiffanie Grimsdell');
+insert into AUTORES (id, nombre) values ('00219127', 'Brewster Spelsbury');
+insert into AUTORES (id, nombre) values ('00219128', 'Fanny Cureton');
+insert into AUTORES (id, nombre) values ('00219129', 'Bethena Coppenhall');
+insert into AUTORES (id, nombre) values ('00219130', 'Susi Filer');
+insert into AUTORES (id, nombre) values ('00219131', 'Brinna Lewington');
+insert into AUTORES (id, nombre) values ('00219132', 'Larissa Linnard');
+insert into AUTORES (id, nombre) values ('00219133', 'Brit Hebden');
+insert into AUTORES (id, nombre) values ('00219134', 'Laure Cardenas');
+insert into AUTORES (id, nombre) values ('00219135', 'Townie Lording');
+insert into AUTORES (id, nombre) values ('00219136', 'Dinnie Turbitt');
+insert into AUTORES (id, nombre) values ('00219137', 'Merv Somers');
+insert into AUTORES (id, nombre) values ('00219138', 'Ash Kibbey');
+insert into AUTORES (id, nombre) values ('00219139', 'Nadine Leiden');
+insert into AUTORES (id, nombre) values ('00219140', 'Margy English');
+insert into AUTORES (id, nombre) values ('00219141', 'Isabelita Bontoft');
+insert into AUTORES (id, nombre) values ('00219142', 'Callida Pauling');
+insert into AUTORES (id, nombre) values ('00219143', 'Brandais Garrett');
+insert into AUTORES (id, nombre) values ('00219144', 'Fonzie Ramm');
+insert into AUTORES (id, nombre) values ('00219145', 'Emmye Meace');
+insert into AUTORES (id, nombre) values ('00219146', 'Rice Aleksashin');
+insert into AUTORES (id, nombre) values ('00219147', 'Ronnica Coster');
+insert into AUTORES (id, nombre) values ('00219148', 'Adah Verrier');
+insert into AUTORES (id, nombre) values ('00219149', 'Truda Morando');
+insert into AUTORES (id, nombre) values ('00219150', 'Octavia Hookes');
+insert into AUTORES (id, nombre) values ('00219151', 'Marlo Cumberpatch');
+insert into AUTORES (id, nombre) values ('00219152', 'Vickie Mellmer');
+insert into AUTORES (id, nombre) values ('00219153', 'Nell Peetermann');
+insert into AUTORES (id, nombre) values ('00219154', 'Jae Zoane');
+insert into AUTORES (id, nombre) values ('00219155', 'Stace Dudley');
+insert into AUTORES (id, nombre) values ('00219156', 'Rosaline Markwell');
+insert into AUTORES (id, nombre) values ('00219157', 'Arte Steggles');
+insert into AUTORES (id, nombre) values ('00219158', 'Yoshi Greedy');
+insert into AUTORES (id, nombre) values ('00219159', 'Dwain Rushford');
+insert into AUTORES (id, nombre) values ('00219160', 'Jabez Scoone');
+insert into AUTORES (id, nombre) values ('00219161', 'Upton Nissle');
+insert into AUTORES (id, nombre) values ('00219162', 'Enrico Priscott');
+insert into AUTORES (id, nombre) values ('00219163', 'Bruce Bordis');
+insert into AUTORES (id, nombre) values ('00219164', 'Keane Purvess');
+insert into AUTORES (id, nombre) values ('00219165', 'Helli Linford');
+insert into AUTORES (id, nombre) values ('00219166', 'Cathlene Leahair');
+insert into AUTORES (id, nombre) values ('00219167', 'Meyer Roadknight');
+insert into AUTORES (id, nombre) values ('00219168', 'Terry Pouton');
+insert into AUTORES (id, nombre) values ('00219169', 'Isabeau Danilchev');
+insert into AUTORES (id, nombre) values ('00219170', 'Tracie Broadley');
+insert into AUTORES (id, nombre) values ('00219171', 'Quinton Hecks');
+insert into AUTORES (id, nombre) values ('00219172', 'Bradley Henner');
+insert into AUTORES (id, nombre) values ('00219173', 'Marley Swynley');
+insert into AUTORES (id, nombre) values ('00219174', 'Polly Laville');
+insert into AUTORES (id, nombre) values ('00219175', 'Faye Stathers');
+insert into AUTORES (id, nombre) values ('00219176', 'Josee Janodet');
+insert into AUTORES (id, nombre) values ('00219177', 'Wynne Pinnijar');
+insert into AUTORES (id, nombre) values ('00219178', 'Mellisent Sealy');
+insert into AUTORES (id, nombre) values ('00219179', 'Alberto Rembrant');
+insert into AUTORES (id, nombre) values ('00219180', 'Corene Owers');
+insert into AUTORES (id, nombre) values ('00219181', 'Andee Turrell');
+insert into AUTORES (id, nombre) values ('00219182', 'Ted Lindeberg');
+insert into AUTORES (id, nombre) values ('00219183', 'Michel Pulhoster');
+insert into AUTORES (id, nombre) values ('00219184', 'Maggy Tomaschke');
+insert into AUTORES (id, nombre) values ('00219185', 'Nananne Leyton');
+insert into AUTORES (id, nombre) values ('00219186', 'Jameson Franzonetti');
+insert into AUTORES (id, nombre) values ('00219187', 'Sharline Scheffler');
+insert into AUTORES (id, nombre) values ('00219188', 'Shea Jorry');
+insert into AUTORES (id, nombre) values ('00219189', 'Betteann Achurch');
+insert into AUTORES (id, nombre) values ('00219190', 'Zebadiah Purchon');
+insert into AUTORES (id, nombre) values ('00219191', 'Odelle Rubinchik');
+insert into AUTORES (id, nombre) values ('00219192', 'Rafi Fawthrop');
+insert into AUTORES (id, nombre) values ('00219193', 'Georgeta Vanyarkin');
+insert into AUTORES (id, nombre) values ('00219194', 'Georgie Drust');
+insert into AUTORES (id, nombre) values ('00219195', 'Delainey Ratt');
+insert into AUTORES (id, nombre) values ('00219196', 'Hans Creasy');
+insert into AUTORES (id, nombre) values ('00219197', 'Sibbie Fladgate');
+insert into AUTORES (id, nombre) values ('00219198', 'Jo Camerati');
+insert into AUTORES (id, nombre) values ('00219199', 'Wye Curnnok');
+insert into AUTORES (id, nombre) values ('00219200', 'Adrianne Bellas');
+GO
 
+insert into ETIQUETA (id, etiqueta) values ('000011', 'ISNB');
+insert into ETIQUETA (id, etiqueta) values ('000012', 'ISSN');
+insert into ETIQUETA (id, etiqueta) values ('000013', 'DOI');
 --ADMINISTRADOR
 GO
 insert into ADMINISTRADOR (Id, Nombre, Contraseña) values (1, 'Richard', 'X3sq8SAqaT');

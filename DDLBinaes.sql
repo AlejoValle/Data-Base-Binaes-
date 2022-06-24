@@ -138,7 +138,7 @@ GO
     Nombre                        VARCHAR   (100)             NOT NULL,
     Contraseña                    VARCHAR   (100)             NOT NULL
     );
-GO
+GOGH
     CREATE TABLE RESERVA_EVENTO (
     id_evento                     CHAR      (100)             NOT NULL,
     id_cliente                    CHAR      (100)             NOT NULL,
