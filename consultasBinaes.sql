@@ -16,4 +16,11 @@ INNER JOIN GENERO Ge
 on co.id_genero=Ge.id
 
 
+SELECT cl.nombre_usuario , cl.Nombre , co.Nombre as Ocupacion FROM CLIENTE cl 
+INNER JOIN INSTITUCION ins 
+ON cl.id_Institucion=ins.id
+INNER JOIN OCUPACION co 
+ON co.id=cl.id_Ocupacion
+WHERE co.id=0006211                                                                                             
+
 
