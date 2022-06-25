@@ -20,6 +20,11 @@ INNER JOIN GENERO gen
 ON gen.id=col.id_genero
 
 
-                                                                                         
+SELECT * FROM PRESTAMO
+WHERE id_ejemplar= '022409LB'     
+
+SELECT * FROM PRESTAMO
+WHERE id_cliente= '0000147'    
+
 
 

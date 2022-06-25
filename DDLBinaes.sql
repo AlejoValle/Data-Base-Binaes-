@@ -102,7 +102,8 @@ GO
 GO
     CREATE TABLE UTILIZA(
         id_area                   CHAR      (100)             NOT NULL,
-        id_cliente                CHAR      (100)             NOT NULL
+        id_cliente                CHAR      (100)             NOT NULL,
+        fecha                     DATE                        NOT NULL
     );
 GO
     CREATE TABLE IMAGEN (
