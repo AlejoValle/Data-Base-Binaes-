@@ -53,8 +53,7 @@ GO
 GO
     CREATE TABLE GENERO(
         id                        CHAR      (100) PRIMARY KEY NOT NULL,
-        genero                    VARCHAR   (100)             NOT NULL,
-        id_coleccion              CHAR      (100)             NOT NULL
+        genero                    VARCHAR   (100)             NOT NULL
     );
 GO
     CREATE TABLE TIPO(
@@ -87,7 +86,7 @@ GO
 GO
     CREATE TABLE PISO(
         id                        CHAR      (100) PRIMARY KEY NOT NULL,
-        piso                      INT                        NOT NULL
+        piso                      VARCHAR   (100)             NOT NULL
     );
 GO
     CREATE TABLE GESTIONA_AM(
@@ -125,7 +124,7 @@ GO
     Objetivos                     VARCHAR   (500)            NOT NULL,
     Cantidad_Asistentes           INT                        NOT NULL,
     id_Area                       CHAR      (100)             NOT NULL,
-    id_Imagenes                   CHAR      (100)             NOT NULL 
+    id_Imagenes                   CHAR      (100)              
     );
 GO
     CREATE TABLE GESTIONA_EA (
@@ -190,8 +189,6 @@ ALTER TABLE MATERIAL_BIBLIOGRAFICO ADD FOREIGN KEY (id_coleccion)               
 GO
 ALTER TABLE AREA                   ADD FOREIGN KEY (id_piso)                         REFERENCES PISO (id);
 ALTER TABLE AREA                   ADD FOREIGN KEY (id_responsable)                  REFERENCES ADMINISTRADOR (id);
-GO
-ALTER TABLE COLECCION              ADD FOREIGN KEY (id_genero)                       REFERENCES GENERO (id);
 GO
 ALTER TABLE GESTIONA_AM            ADD CONSTRAINT pk_gestiona_AM                     PRIMARY KEY (id_administrador, id_material_bibliografico);
 ALTER TABLE GESTIONA_AM            ADD FOREIGN KEY (id_administrador)                REFERENCES ADMINISTRADOR (id);
