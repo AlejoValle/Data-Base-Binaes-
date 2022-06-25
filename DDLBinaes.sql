@@ -1,5 +1,4 @@
 CREATE DATABASE BINAES
-GO
 USE BINAES
 GO
     CREATE TABLE PALABRAS_CLAVE (
@@ -90,7 +89,7 @@ GO
 GO
     CREATE TABLE GESTIONA_AM(
         id_administrador          CHAR      (100)             NOT NULL,
-        id_coleccion               CHAR      (100)             NOT NULL
+        id_coleccion              CHAR      (100)             NOT NULL
     );
 GO
     CREATE TABLE PRESTAMO(
