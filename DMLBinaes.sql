@@ -298,30 +298,6 @@ insert into COLECCION (id, nombre_coleccion, id_genero, id_tipo) values ('057120
 insert into COLECCION (id, nombre_coleccion, id_genero, id_tipo) values ('057121CO', 'Sociales', '089641GE', 'id8');
 insert into COLECCION (id, nombre_coleccion, id_genero, id_tipo) values ('057122CO', 'Ciencias', '089590GE', 'id4');
 GO
-insert into MATERIAL_BIBLIOGRAFICO (id, id_coleccion) values ('0012801bl', '057100CO');
-insert into MATERIAL_BIBLIOGRAFICO (id, id_coleccion) values ('0012802bl', '057101CO');
-insert into MATERIAL_BIBLIOGRAFICO (id, id_coleccion) values ('0012803bl', '057102CO');
-insert into MATERIAL_BIBLIOGRAFICO (id, id_coleccion) values ('0012804bl', '057103CO');
-insert into MATERIAL_BIBLIOGRAFICO (id, id_coleccion) values ('0012805bl', '057104CO');
-insert into MATERIAL_BIBLIOGRAFICO (id, id_coleccion) values ('0012806bl', '057105CO');
-insert into MATERIAL_BIBLIOGRAFICO (id, id_coleccion) values ('0012807bl', '057106CO');
-insert into MATERIAL_BIBLIOGRAFICO (id, id_coleccion) values ('0012808bl', '057107CO');
-insert into MATERIAL_BIBLIOGRAFICO (id, id_coleccion) values ('0012809bl', '057108CO');
-insert into MATERIAL_BIBLIOGRAFICO (id, id_coleccion) values ('0012810bl', '057109CO');
-insert into MATERIAL_BIBLIOGRAFICO (id, id_coleccion) values ('0012811bl', '057110CO');
-insert into MATERIAL_BIBLIOGRAFICO (id, id_coleccion) values ('0012812bl', '057111CO');
-insert into MATERIAL_BIBLIOGRAFICO (id, id_coleccion) values ('0012813bl', '057112CO');
-insert into MATERIAL_BIBLIOGRAFICO (id, id_coleccion) values ('0012814bl', '057113CO');
-insert into MATERIAL_BIBLIOGRAFICO (id, id_coleccion) values ('0012815bl', '057114CO');
-insert into MATERIAL_BIBLIOGRAFICO (id, id_coleccion) values ('0012816bl', '057115CO');
-insert into MATERIAL_BIBLIOGRAFICO (id, id_coleccion) values ('0012817bl', '057116CO');
-insert into MATERIAL_BIBLIOGRAFICO (id, id_coleccion) values ('0012818bl', '057117CO');
-insert into MATERIAL_BIBLIOGRAFICO (id, id_coleccion) values ('0012819bl', '057118CO');
-insert into MATERIAL_BIBLIOGRAFICO (id, id_coleccion) values ('0012820bl', '057119CO');
-insert into MATERIAL_BIBLIOGRAFICO (id, id_coleccion) values ('0012821bl', '057120CO');
-insert into MATERIAL_BIBLIOGRAFICO (id, id_coleccion) values ('0012822bl', '057121CO');
-insert into MATERIAL_BIBLIOGRAFICO (id, id_coleccion) values ('0012823bl', '057122CO');
-GO
 insert into EJEMPLAR (id, fecha_publicacion, id_autor, id_etiqueta, id_idioma, id_formato  , id_palabra_clave, id_editorial, Nombre, id_coleccion) values ('022100LB', CONVERT (DATE,'09/06/2022',103), '00219120', '000011', 2, 2, 'id1366', 'id4756', 'In This Our Life', '057112CO');
 insert into EJEMPLAR (id, fecha_publicacion, id_autor, id_etiqueta, id_idioma, id_formato  , id_palabra_clave, id_editorial, Nombre, id_coleccion) values ('022101LB', CONVERT (DATE,'15/08/1960',103), '00219180', '000012', 2, 2, 'id2852', 'id4762', 'Solo Sunny', '057104CO');
 insert into EJEMPLAR (id, fecha_publicacion, id_autor, id_etiqueta, id_idioma, id_formato  , id_palabra_clave, id_editorial, Nombre, id_coleccion) values ('022102LB', CONVERT (DATE,'01/12/1976',103), '00219133', '000011', 2, 2, 'id4685', 'id2624', 'Little Trip to Heaven, A', '057106CO');
@@ -829,68 +805,33 @@ insert into ADMINISTRADOR (Id, Nombre, Contraseña) values ('00133221', 'Richard
 insert into ADMINISTRADOR (Id, Nombre, Contraseña) values ('00052121', 'Robles', 'oRIGXF1R');
 insert into ADMINISTRADOR (Id, Nombre, Contraseña) values ('00139121', 'Alejo', 'SHwQOct7');
 insert into ADMINISTRADOR (Id, Nombre, Contraseña) values ('00150721', 'Tony', 'qSLXjEX2e');
-
-insert into AREA (id, horario, id_piso, id_material_bibliografico, id_responsable, descripcion , nombre) values ('009701', 'lunes a domingo de 8:00 am a 12:pm', '007122P', '0012819bl', '00133221', 'descripcion', 'Salones lúdicos');
-insert into AREA (id, horario, id_piso, id_material_bibliografico, id_responsable, descripcion , nombre) values ('009702', 'lunes a domingo de 8:00 am a 12:pm', '007123P', '0012819bl', '00133221', 'descripcion', 'Salones lúdicos');
-
-insert into AREA (id, horario, id_piso, id_responsable, descripcion , nombre) values ('009703', 'lunes a domingo de 8:00 am a 12:pm', '007122P', '00052121', 'descripcion', 'Auditórium');
-
+GO
+insert into AREA (id, horario, id_piso, id_responsable, descripcion , nombre) values ('009701', 'lunes a domingo de 8:00 am a 12:pm', '007122P','00133221', 'descripcion', 'Salones lúdicos');
+insert into AREA (id, horario, id_piso, id_responsable, descripcion , nombre) values ('009702', 'lunes a domingo de 8:00 am a 12:pm', '007123P','00133221', 'descripcion', 'Salones lúdicos');
+insert into AREA (id, horario, id_piso, id_responsable, descripcion , nombre) values ('009703', 'lunes a domingo de 8:00 am a 12:pm', '007122P','00052121', 'descripcion', 'Auditórium');
 insert into AREA (id, horario, id_piso, id_responsable, descripcion , nombre) values ('009704', 'lunes a domingo de 8:00 am a 12:pm', '007123P','00139121', 'descripcion', 'Sala de proyección');
 insert into AREA (id, horario, id_piso, id_responsable, descripcion , nombre) values ('009705', 'lunes a domingo de 8:00 am a 12:pm', '007124P','00139121', 'descripcion', 'Sala de proyección');
 insert into AREA (id, horario, id_piso, id_responsable, descripcion , nombre) values ('009706', 'lunes a domingo de 8:00 am a 12:pm', '007125P','00139121', 'descripcion', 'Sala de proyección');
-
-insert into AREA (id, horario, id_piso, id_material_bibliografico, id_responsable, descripcion , nombre) values ('009707', 'lunes a domingo de 8:00 am a 12:pm', '007122P', '0012807bl', '00150721', 'descripcion', 'Área de computación');
-insert into AREA (id, horario, id_piso, id_material_bibliografico, id_responsable, descripcion , nombre) values ('009708', 'lunes a domingo de 8:00 am a 12:pm', '007122P', '0012807bl', '00150721', 'descripcion', 'Área de computación');
-insert into AREA (id, horario, id_piso, id_material_bibliografico, id_responsable, descripcion , nombre) values ('009709', 'lunes a domingo de 8:00 am a 12:pm', '007123P', '0012807bl', '00150721', 'descripcion', 'Área de computación');
-insert into AREA (id, horario, id_piso, id_material_bibliografico, id_responsable, descripcion , nombre) values ('009710', 'lunes a domingo de 8:00 am a 12:pm', '007123P', '0012807bl', '00150721', 'descripcion', 'Área de computación');
-insert into AREA (id, horario, id_piso, id_material_bibliografico, id_responsable, descripcion , nombre) values ('009711', 'lunes a domingo de 8:00 am a 12:pm', '007124P', '0012807bl', '00150721', 'descripcion', 'Área de computación');
-insert into AREA (id, horario, id_piso, id_material_bibliografico, id_responsable, descripcion , nombre) values ('009712', 'lunes a domingo de 8:00 am a 12:pm', '007124P', '0012807bl', '00150721', 'descripcion', 'Área de computación');
-insert into AREA (id, horario, id_piso, id_material_bibliografico, id_responsable, descripcion , nombre) values ('009713', 'lunes a domingo de 8:00 am a 12:pm', '007125P', '0012807bl', '00150721', 'descripcion', 'Área de computación');
-insert into AREA (id, horario, id_piso, id_material_bibliografico, id_responsable, descripcion , nombre) values ('009714', 'lunes a domingo de 8:00 am a 12:pm', '007125P', '0012807bl', '00150721', 'descripcion', 'Área de computación');
-
-insert into AREA (id, horario, id_piso, id_material_bibliografico, id_responsable, descripcion , nombre) values ('009715', 'lunes a domingo de 8:00 am a 12:pm', '007122P', '0012806bl', '00133221', 'descripcion', 'Área de promoción de inclusión');
-insert into AREA (id, horario, id_piso, id_material_bibliografico, id_responsable, descripcion , nombre) values ('009716', 'lunes a domingo de 8:00 am a 12:pm', '007122P', '0012806bl', '00133221', 'descripcion', 'Área de promoción de inclusión');
-
-
-insert into AREA (id, horario, id_piso, id_material_bibliografico, id_responsable, descripcion , nombre) values ('009718', 'lunes a domingo de 8:00 am a 12:pm', '007125P', '0012804bl', '00052121', 'descripcion', 'Sala de investigación');
-
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-insert into AREA (id, horario, id_piso, id_material_bibliografico , id_material_bibliografico, id_responsable, descripcion , nombre) values ('009717', 'lunes a domingo de 8:00 am a 12:pm', '007125P', '0012801bl', '0012802bl', '00052121', 'descripcion', 'Sala de investigación');
-insert into AREA (id, id_material_bibliografico) values ('009717', '0012801bl');
-
-
-
-insert into AREA (id, horario, id_piso, id_material_bibliografico, id_responsable, descripcion , nombre) values ('009717', 'lunes a domingo de 8:00 am a 12:pm', '007125P', '0012802bl', '00052121', 'descripcion', 'Sala de investigación');
-insert into AREA (id, horario, id_piso, id_material_bibliografico, id_responsable, descripcion , nombre) values ('009717', 'lunes a domingo de 8:00 am a 12:pm', '007125P', '0012803bl', '00052121', 'descripcion', 'Sala de investigación');
-insert into AREA (id, horario, id_piso, id_material_bibliografico, id_responsable, descripcion , nombre) values ('009717', 'lunes a domingo de 8:00 am a 12:pm', '007125P', '0012804bl', '00052121', 'descripcion', 'Sala de investigación');
-insert into AREA (id, horario, id_piso, id_material_bibliografico, id_responsable, descripcion , nombre) values ('009717', 'lunes a domingo de 8:00 am a 12:pm', '007125P', '0012805bl', '00052121', 'descripcion', 'Sala de investigación');
-insert into AREA (id, horario, id_piso, id_material_bibliografico, id_responsable, descripcion , nombre) values ('009717', 'lunes a domingo de 8:00 am a 12:pm', '007125P', '0012806bl', '00052121', 'descripcion', 'Sala de investigación');
-insert into AREA (id, horario, id_piso, id_material_bibliografico, id_responsable, descripcion , nombre) values ('009717', 'lunes a domingo de 8:00 am a 12:pm', '007125P', '0012807bl', '00052121', 'descripcion', 'Sala de investigación');
-insert into AREA (id, horario, id_piso, id_material_bibliografico, id_responsable, descripcion , nombre) values ('009717', 'lunes a domingo de 8:00 am a 12:pm', '007125P', '0012808bl', '00052121', 'descripcion', 'Sala de investigación');
-insert into AREA (id, horario, id_piso, id_material_bibliografico, id_responsable, descripcion , nombre) values ('009717', 'lunes a domingo de 8:00 am a 12:pm', '007125P', '0012809bl', '00052121', 'descripcion', 'Sala de investigación');
-insert into AREA (id, horario, id_piso, id_material_bibliografico, id_responsable, descripcion , nombre) values ('009717', 'lunes a domingo de 8:00 am a 12:pm', '007125P', '0012810bl', '00052121', 'descripcion', 'Sala de investigación');
-insert into AREA (id, horario, id_piso, id_material_bibliografico, id_responsable, descripcion , nombre) values ('009717', 'lunes a domingo de 8:00 am a 12:pm', '007125P', '0012811bl', '00052121', 'descripcion', 'Sala de investigación');
-insert into AREA (id, horario, id_piso, id_material_bibliografico, id_responsable, descripcion , nombre) values ('009717', 'lunes a domingo de 8:00 am a 12:pm', '007125P', '0012812bl', '00052121', 'descripcion', 'Sala de investigación');
-insert into AREA (id, horario, id_piso, id_material_bibliografico, id_responsable, descripcion , nombre) values ('009717', 'lunes a domingo de 8:00 am a 12:pm', '007125P', '0012813bl', '00052121', 'descripcion', 'Sala de investigación');
-insert into AREA (id, horario, id_piso, id_material_bibliografico, id_responsable, descripcion , nombre) values ('009717', 'lunes a domingo de 8:00 am a 12:pm', '007125P', '0012814bl', '00052121', 'descripcion', 'Sala de investigación');
-insert into AREA (id, horario, id_piso, id_material_bibliografico, id_responsable, descripcion , nombre) values ('009717', 'lunes a domingo de 8:00 am a 12:pm', '007125P', '0012815bl', '00052121', 'descripcion', 'Sala de investigación');
-insert into AREA (id, horario, id_piso, id_material_bibliografico, id_responsable, descripcion , nombre) values ('009717', 'lunes a domingo de 8:00 am a 12:pm', '007125P', '0012816bl', '00052121', 'descripcion', 'Sala de investigación');
-insert into AREA (id, horario, id_piso, id_material_bibliografico, id_responsable, descripcion , nombre) values ('009717', 'lunes a domingo de 8:00 am a 12:pm', '007125P', '0012817bl', '00052121', 'descripcion', 'Sala de investigación');
-insert into AREA (id, horario, id_piso, id_material_bibliografico, id_responsable, descripcion , nombre) values ('009717', 'lunes a domingo de 8:00 am a 12:pm', '007125P', '0012818bl', '00052121', 'descripcion', 'Sala de investigación');
-insert into AREA (id, horario, id_piso, id_material_bibliografico, id_responsable, descripcion , nombre) values ('009717', 'lunes a domingo de 8:00 am a 12:pm', '007125P', '0012819bl', '00052121', 'descripcion', 'Sala de investigación');
-insert into AREA (id, horario, id_piso, id_material_bibliografico, id_responsable, descripcion , nombre) values ('009717', 'lunes a domingo de 8:00 am a 12:pm', '007125P', '0012820bl', '00052121', 'descripcion', 'Sala de investigación');
-insert into AREA (id, horario, id_piso, id_material_bibliografico, id_responsable, descripcion , nombre) values ('009717', 'lunes a domingo de 8:00 am a 12:pm', '007125P', '0012821bl', '00052121', 'descripcion', 'Sala de investigación');
-insert into AREA (id, horario, id_piso, id_material_bibliografico, id_responsable, descripcion , nombre) values ('009717', 'lunes a domingo de 8:00 am a 12:pm', '007125P', '0012822bl', '00052121', 'descripcion', 'Sala de investigación');
-
-insert into AREA (id, horario, id_piso, id_material_bibliografico, id_responsable, descripcion , nombre) values ('009719', 'lunes a domingo de 8:00 am a 12:pm', '007122P', '0012801bl', '00139121', 'descripcion', 'Área de biblioteca');
-insert into AREA (id, horario, id_piso, id_material_bibliografico, id_responsable, descripcion , nombre) values ('009720', 'lunes a domingo de 8:00 am a 12:pm', '007122P', '0012801bl', '00139121', 'descripcion', 'Área de biblioteca');
-insert into AREA (id, horario, id_piso, id_material_bibliografico, id_responsable, descripcion , nombre) values ('009721', 'lunes a domingo de 8:00 am a 12:pm', '007123P', '0012801bl', '00139121', 'descripcion', 'Área de biblioteca');
-insert into AREA (id, horario, id_piso, id_material_bibliografico, id_responsable, descripcion , nombre) values ('009722', 'lunes a domingo de 8:00 am a 12:pm', '007123P', '0012801bl', '00139121', 'descripcion', 'Área de biblioteca');
-insert into AREA (id, horario, id_piso, id_material_bibliografico, id_responsable, descripcion , nombre) values ('009723', 'lunes a domingo de 8:00 am a 12:pm', '007124P', '0012801bl', '00139121', 'descripcion', 'Área de biblioteca');
-insert into AREA (id, horario, id_piso, id_material_bibliografico, id_responsable, descripcion , nombre) values ('009724', 'lunes a domingo de 8:00 am a 12:pm', '007124P', '0012801bl', '00139121', 'descripcion', 'Área de biblioteca');
-insert into AREA (id, horario, id_piso, id_material_bibliografico, id_responsable, descripcion , nombre) values ('009725', 'lunes a domingo de 8:00 am a 12:pm', '007125P', '0012801bl', '00139121', 'descripcion', 'Área de biblioteca');
-insert into AREA (id, horario, id_piso, id_material_bibliografico, id_responsable, descripcion , nombre) values ('009726', 'lunes a domingo de 8:00 am a 12:pm', '007125P', '0012801bl', '00139121', 'descripcion', 'Área de biblioteca');
+insert into AREA (id, horario, id_piso, id_responsable, descripcion , nombre) values ('009707', 'lunes a domingo de 8:00 am a 12:pm', '007122P','00150721', 'descripcion', 'Área de computación');
+insert into AREA (id, horario, id_piso, id_responsable, descripcion , nombre) values ('009708', 'lunes a domingo de 8:00 am a 12:pm', '007122P','00150721', 'descripcion', 'Área de computación');
+insert into AREA (id, horario, id_piso, id_responsable, descripcion , nombre) values ('009709', 'lunes a domingo de 8:00 am a 12:pm', '007123P','00150721', 'descripcion', 'Área de computación');
+insert into AREA (id, horario, id_piso, id_responsable, descripcion , nombre) values ('009710', 'lunes a domingo de 8:00 am a 12:pm', '007123P','00150721', 'descripcion', 'Área de computación');
+insert into AREA (id, horario, id_piso, id_responsable, descripcion , nombre) values ('009711', 'lunes a domingo de 8:00 am a 12:pm', '007124P','00150721', 'descripcion', 'Área de computación');
+insert into AREA (id, horario, id_piso, id_responsable, descripcion , nombre) values ('009712', 'lunes a domingo de 8:00 am a 12:pm', '007124P','00150721', 'descripcion', 'Área de computación');
+insert into AREA (id, horario, id_piso, id_responsable, descripcion , nombre) values ('009713', 'lunes a domingo de 8:00 am a 12:pm', '007125P','00150721', 'descripcion', 'Área de computación');
+insert into AREA (id, horario, id_piso, id_responsable, descripcion , nombre) values ('009714', 'lunes a domingo de 8:00 am a 12:pm', '007125P','00150721', 'descripcion', 'Área de computación');
+insert into AREA (id, horario, id_piso, id_responsable, descripcion , nombre) values ('009715', 'lunes a domingo de 8:00 am a 12:pm', '007122P','00133221', 'descripcion', 'Área de promoción de inclusión');
+insert into AREA (id, horario, id_piso, id_responsable, descripcion , nombre) values ('009716', 'lunes a domingo de 8:00 am a 12:pm', '007122P','00133221', 'descripcion', 'Área de promoción de inclusión');
+insert into AREA (id, horario, id_piso, id_responsable, descripcion , nombre) values ('009718', 'lunes a domingo de 8:00 am a 12:pm', '007125P','00052121', 'descripcion', 'Sala de investigación');
+insert into AREA (id, horario, id_piso, id_responsable, descripcion , nombre) values ('009717', 'lunes a domingo de 8:00 am a 12:pm', '007125P','00052121', 'descripcion', 'Sala de investigación');
+insert into AREA (id, horario, id_piso, id_responsable, descripcion , nombre) values ('009719', 'lunes a domingo de 8:00 am a 12:pm', '007122P','00139121', 'descripcion', 'Área de biblioteca');
+insert into AREA (id, horario, id_piso, id_responsable, descripcion , nombre) values ('009720', 'lunes a domingo de 8:00 am a 12:pm', '007122P','00139121', 'descripcion', 'Área de biblioteca');
+insert into AREA (id, horario, id_piso, id_responsable, descripcion , nombre) values ('009721', 'lunes a domingo de 8:00 am a 12:pm', '007123P','00139121', 'descripcion', 'Área de biblioteca');
+insert into AREA (id, horario, id_piso, id_responsable, descripcion , nombre) values ('009722', 'lunes a domingo de 8:00 am a 12:pm', '007123P','00139121', 'descripcion', 'Área de biblioteca');
+insert into AREA (id, horario, id_piso, id_responsable, descripcion , nombre) values ('009723', 'lunes a domingo de 8:00 am a 12:pm', '007124P','00139121', 'descripcion', 'Área de biblioteca');
+insert into AREA (id, horario, id_piso, id_responsable, descripcion , nombre) values ('009724', 'lunes a domingo de 8:00 am a 12:pm', '007124P','00139121', 'descripcion', 'Área de biblioteca');
+insert into AREA (id, horario, id_piso, id_responsable, descripcion , nombre) values ('009725', 'lunes a domingo de 8:00 am a 12:pm', '007125P','00139121', 'descripcion', 'Área de biblioteca');
+insert into AREA (id, horario, id_piso, id_responsable, descripcion , nombre) values ('009726', 'lunes a domingo de 8:00 am a 12:pm', '007125P','00139121', 'descripcion', 'Área de biblioteca');
 
 
 

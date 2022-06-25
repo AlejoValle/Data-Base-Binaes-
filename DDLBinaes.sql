@@ -70,7 +70,7 @@ GO
     );
 GO
     CREATE TABLE MATERIAL_BIBLIOGRAFICO(
-        id                        CHAR      (100) PRIMARY KEY NOT NULL,
+        id_area                   CHAR      (100)             NOT NULL,
         id_coleccion              CHAR      (100)             NOT NULL
     );
 GO
@@ -80,7 +80,6 @@ GO
         descripcion               VARCHAR   (100)             NOT NULL,
         horario                   VARCHAR   (100)             NOT NULL,
         id_piso                   CHAR      (100)             NOT NULL,
-        id_material_bibliografico CHAR      (100)                     ,
         id_responsable            CHAR      (100)             NOT NULL
     );
 GO
@@ -91,11 +90,11 @@ GO
 GO
     CREATE TABLE GESTIONA_AM(
         id_administrador          CHAR      (100)             NOT NULL,
-        id_material_bibliografico CHAR      (100)             NOT NULL
+        id_area CHAR      (100)             NOT NULL
     );
 GO
     CREATE TABLE PRESTAMO(
-        id_material_bibliografico CHAR      (100)             NOT NULL,
+        id_area CHAR      (100)             NOT NULL,
         id_cliente                CHAR      (100)             NOT NULL,
         fecha_prestamo            DATE                       NOT NULL,
         fecha_devolucion          DATE                       NOT NULL
@@ -113,7 +112,7 @@ GO
     );
 GO
     CREATE TABLE RESERVA_LIBRO (
-    id_material_bibliografico     CHAR      (100)             NOT NULL,
+    id_area     CHAR      (100)             NOT NULL,
     id_cliente                    CHAR      (100)             NOT NULL,
     fecha_reserva                 DATE NOT NULL
     );
@@ -185,26 +184,28 @@ GO
 ALTER TABLE COLECCION              ADD FOREIGN KEY (id_tipo)                         REFERENCES TIPO (id);
 ALTER TABLE COLECCION              ADD FOREIGN KEY (id_genero)                       REFERENCES GENERO (id);
 GO
+ALTER TABLE MATERIAL_BIBLIOGRAFICO ADD CONSTRAINT pk_material_Bibliografico          PRIMARY KEY (id_coleccion, id_area);
 ALTER TABLE MATERIAL_BIBLIOGRAFICO ADD FOREIGN KEY (id_coleccion)                    REFERENCES COLECCION (id);
+ALTER TABLE MATERIAL_BIBLIOGRAFICO ADD FOREIGN KEY (id_area)                         REFERENCES AREA (id);
 GO
 ALTER TABLE AREA                   ADD FOREIGN KEY (id_piso)                         REFERENCES PISO (id);
 ALTER TABLE AREA                   ADD FOREIGN KEY (id_responsable)                  REFERENCES ADMINISTRADOR (id);
 GO
-ALTER TABLE GESTIONA_AM            ADD CONSTRAINT pk_gestiona_AM                     PRIMARY KEY (id_administrador, id_material_bibliografico);
+ALTER TABLE GESTIONA_AM            ADD CONSTRAINT pk_gestiona_AM                     PRIMARY KEY (id_administrador, id_area);                  
 ALTER TABLE GESTIONA_AM            ADD FOREIGN KEY (id_administrador)                REFERENCES ADMINISTRADOR (id);
-ALTER TABLE GESTIONA_AM            ADD FOREIGN KEY (id_material_bibliografico)       REFERENCES MATERIAL_BIBLIOGRAFICO (id);
+ALTER TABLE GESTIONA_AM            ADD FOREIGN KEY (id_area)                         REFERENCES AREA (id);
 GO
-ALTER TABLE PRESTAMO               ADD CONSTRAINT pk_gestiona                        PRIMARY KEY (id_cliente, id_material_bibliografico);
+ALTER TABLE PRESTAMO               ADD CONSTRAINT pk_gestiona                        PRIMARY KEY (id_cliente, id_area);                  
 ALTER TABLE PRESTAMO               ADD FOREIGN KEY (id_cliente)                      REFERENCES CLIENTE (id);
-ALTER TABLE PRESTAMO               ADD FOREIGN KEY (id_material_bibliografico)       REFERENCES MATERIAL_BIBLIOGRAFICO (id);
+ALTER TABLE PRESTAMO               ADD FOREIGN KEY (id_area)                         REFERENCES AREA (id);
 GO
-ALTER TABLE RESERVA_LIBRO          ADD CONSTRAINT pk_reseva_libro                    PRIMARY KEY (id_cliente, id_material_bibliografico);
+ALTER TABLE RESERVA_LIBRO          ADD CONSTRAINT pk_reseva_libro                    PRIMARY KEY (id_cliente, id_area);                  
 ALTER TABLE RESERVA_LIBRO          ADD FOREIGN KEY (id_cliente)                      REFERENCES CLIENTE (id);
-ALTER TABLE RESERVA_LIBRO          ADD FOREIGN KEY (id_material_bibliografico)       REFERENCES MATERIAL_BIBLIOGRAFICO (id);
+ALTER TABLE RESERVA_LIBRO          ADD FOREIGN KEY (id_area)                         REFERENCES AREA (id);
 GO
 ALTER TABLE UTILIZA                ADD CONSTRAINT pk_utiliza_libro                   PRIMARY KEY (id_cliente, id_area);
 ALTER TABLE UTILIZA                ADD FOREIGN KEY (id_cliente)                      REFERENCES CLIENTE (id);
-ALTER TABLE UTILIZA                ADD FOREIGN KEY (id_area)                         REFERENCES MATERIAL_BIBLIOGRAFICO (id);
+ALTER TABLE UTILIZA                ADD FOREIGN KEY (id_area)                         REFERENCES AREA (id);
 GO
 ALTER TABLE GESTIONA_UA            ADD CONSTRAINT pk_gestiona_UA                     PRIMARY KEY (id_administrador, id_cliente);
 ALTER TABLE GESTIONA_UA            ADD FOREIGN KEY (id_administrador)                REFERENCES ADMINISTRADOR (id);
