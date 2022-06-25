@@ -94,7 +94,7 @@ GO
     );
 GO
     CREATE TABLE PRESTAMO(
-        id_area CHAR      (100)             NOT NULL,
+        id_ejemplar               CHAR      (100)             NOT NULL,
         id_cliente                CHAR      (100)             NOT NULL,
         fecha_prestamo            DATE                        NOT NULL,
         fecha_devolucion          DATE                        NOT NULL
@@ -112,9 +112,9 @@ GO
     );
 GO
     CREATE TABLE RESERVA_LIBRO (
-    id_area                       CHAR      (100)             NOT NULL,
+    id_ejemplar                   CHAR      (100)             NOT NULL,
     id_cliente                    CHAR      (100)             NOT NULL,
-    fecha_reserva                 DATE NOT NULL
+    fecha_reserva                 DATE                        NOT NULL
     );
 GO
     CREATE TABLE EVENTO (
@@ -195,13 +195,13 @@ ALTER TABLE GESTIONA_AM            ADD CONSTRAINT pk_gestiona_AM                
 ALTER TABLE GESTIONA_AM            ADD FOREIGN KEY (id_administrador)                REFERENCES ADMINISTRADOR (id);
 ALTER TABLE GESTIONA_AM            ADD FOREIGN KEY (id_area)                         REFERENCES AREA (id);
 GO
-ALTER TABLE PRESTAMO               ADD CONSTRAINT pk_gestiona                        PRIMARY KEY (id_cliente, id_area);                  
+ALTER TABLE PRESTAMO               ADD CONSTRAINT pk_gestiona                        PRIMARY KEY (id_cliente,id_ejemplar );                  
 ALTER TABLE PRESTAMO               ADD FOREIGN KEY (id_cliente)                      REFERENCES CLIENTE (id);
-ALTER TABLE PRESTAMO               ADD FOREIGN KEY (id_area)                         REFERENCES AREA (id);
+ALTER TABLE PRESTAMO               ADD FOREIGN KEY (id_ejemplar)                     REFERENCES EJEMPLAR (id);
 GO
-ALTER TABLE RESERVA_LIBRO          ADD CONSTRAINT pk_reseva_libro                    PRIMARY KEY (id_cliente, id_area);                  
+ALTER TABLE RESERVA_LIBRO          ADD CONSTRAINT pk_reseva_libro                    PRIMARY KEY (id_cliente,id_ejemplar);                  
 ALTER TABLE RESERVA_LIBRO          ADD FOREIGN KEY (id_cliente)                      REFERENCES CLIENTE (id);
-ALTER TABLE RESERVA_LIBRO          ADD FOREIGN KEY (id_area)                         REFERENCES AREA (id);
+ALTER TABLE RESERVA_LIBRO          ADD FOREIGN KEY (id_ejemplar)                     REFERENCES EJEMPLAR (id);
 GO
 ALTER TABLE UTILIZA                ADD CONSTRAINT pk_utiliza_libro                   PRIMARY KEY (id_cliente, id_area);
 ALTER TABLE UTILIZA                ADD FOREIGN KEY (id_cliente)                      REFERENCES CLIENTE (id);
