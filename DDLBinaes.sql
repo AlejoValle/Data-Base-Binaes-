@@ -96,8 +96,8 @@ GO
     CREATE TABLE PRESTAMO(
         id_area CHAR      (100)             NOT NULL,
         id_cliente                CHAR      (100)             NOT NULL,
-        fecha_prestamo            DATE                       NOT NULL,
-        fecha_devolucion          DATE                       NOT NULL
+        fecha_prestamo            DATE                        NOT NULL,
+        fecha_devolucion          DATE                        NOT NULL
     );
 GO
     CREATE TABLE UTILIZA(
@@ -107,12 +107,12 @@ GO
 GO
     CREATE TABLE IMAGEN (
     id                            CHAR      (100) PRIMARY KEY NOT NULL,
-    imagen                        VARBINARY (MAX)                    ,
+    imagen                        VARBINARY (MAX)                     ,
     id_evento                     CHAR      (100)             NOT NULL
     );
 GO
     CREATE TABLE RESERVA_LIBRO (
-    id_area     CHAR      (100)             NOT NULL,
+    id_area                       CHAR      (100)             NOT NULL,
     id_cliente                    CHAR      (100)             NOT NULL,
     fecha_reserva                 DATE NOT NULL
     );
@@ -120,8 +120,8 @@ GO
     CREATE TABLE EVENTO (
     id                            CHAR      (100) PRIMARY KEY NOT NULL,
     Titulo                        VARCHAR   (100)             NOT NULL,
-    Objetivos                     VARCHAR   (500)            NOT NULL,
-    Cantidad_Asistentes           INT                        NOT NULL,
+    Objetivos                     VARCHAR   (500)             NOT NULL,
+    Cantidad_Asistentes           INT                         NOT NULL,
     id_Area                       CHAR      (100)             NOT NULL,
     id_Imagenes                   CHAR      (100)              
     );
