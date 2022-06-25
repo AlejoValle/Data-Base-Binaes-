@@ -242,6 +242,86 @@ insert into TIPO (id, tipo) values ('id6', 'tesis');
 insert into TIPO (id, tipo) values ('id7', 'audio');
 insert into TIPO (id, tipo) values ('id8', 'video');
 GO
+
+insert into PISO (id,piso) values ('007122P','Primer piso');
+insert into PISO (id,piso) values ('007123P','Segundo piso');
+insert into PISO (id,piso) values ('007124P','Tercer piso');
+insert into PISO (id,piso) values ('007125P','Cuarto piso');
+GO
+insert into GENERO (id, genero) values ('089470GE', 'Cuento');
+insert into GENERO (id, genero) values ('089989GE', 'epopeya');
+insert into GENERO (id, genero) values ('089679GE', 'novela');
+insert into GENERO (id, genero) values ('089805GE', 'poema épico');
+insert into GENERO (id, genero) values ('089947GE', 'cantares de gesta');
+insert into GENERO (id, genero) values ('089291GE', 'fábula');
+insert into GENERO (id, genero) values ('089464GE', 'leyendas');
+insert into GENERO (id, genero) values ('089304GE', 'romances líricos');
+insert into GENERO (id, genero) values ('089488GE', 'epístola');
+insert into GENERO (id, genero) values ('089721GE', 'Poema');
+insert into GENERO (id, genero) values ('089432GE', 'oda');
+insert into GENERO (id, genero) values ('089980GE', 'sonetos');
+insert into GENERO (id, genero) values ('089929GE', 'elegía');
+insert into GENERO (id, genero) values ('089641GE', 'égloga sátira');
+insert into GENERO (id, genero) values ('089125GE', 'himnos');
+insert into GENERO (id, genero) values ('089439GE', 'Teatro');
+insert into GENERO (id, genero) values ('089385GE', 'drama');
+insert into GENERO (id, genero) values ('089590GE', 'comedia');
+insert into GENERO (id, genero) values ('089166GE', 'amor');
+insert into GENERO (id, genero) values ('089958GE', 'ópera');
+insert into GENERO (id, genero) values ('089636GE', 'melodrama');
+insert into GENERO (id, genero) values ('089686GE', 'farsa');
+insert into GENERO (id, genero) values ('089376GE', 'tragedia');
+insert into GENERO (id, genero) values ('089803GE', 'Ensayo');
+insert into GENERO (id, genero) values ('089834GE', 'manuales');
+GO
+insert into COLECCION (id, nombre_coleccion, id_genero, id_tipo) values ('057100CO', 'Ciencias', '089947GE', 'id8');
+insert into COLECCION (id, nombre_coleccion, id_genero, id_tipo) values ('057101CO', 'Lenguaje', '089980GE', 'id3');
+insert into COLECCION (id, nombre_coleccion, id_genero, id_tipo) values ('057102CO', 'Musica', '089488GE', 'id4');
+insert into COLECCION (id, nombre_coleccion, id_genero, id_tipo) values ('057103CO', 'Diseño', '089470GE', 'id8');
+insert into COLECCION (id, nombre_coleccion, id_genero, id_tipo) values ('057104CO', 'Arquitectura', '089488GE', 'id1');
+insert into COLECCION (id, nombre_coleccion, id_genero, id_tipo) values ('057105CO', 'Sexual', '089989GE', 'id7');
+insert into COLECCION (id, nombre_coleccion, id_genero, id_tipo) values ('057106CO', 'Programacion', '089803GE', 'id1');
+insert into COLECCION (id, nombre_coleccion, id_genero, id_tipo) values ('057107CO', 'Mecanica', '089686GE', 'id1');
+insert into COLECCION (id, nombre_coleccion, id_genero, id_tipo) values ('057108CO', 'Electronica', '089376GE', 'id2');
+insert into COLECCION (id, nombre_coleccion, id_genero, id_tipo) values ('057109CO', 'Liderzgo', '089125GE', 'id2');
+insert into COLECCION (id, nombre_coleccion, id_genero, id_tipo) values ('057110CO', 'Manga', '089929GE', 'id3');
+insert into COLECCION (id, nombre_coleccion, id_genero, id_tipo) values ('057111CO', 'Miedo', '089721GE', 'id2');
+insert into COLECCION (id, nombre_coleccion, id_genero, id_tipo) values ('057112CO', 'Ingenieria', '089679GE', 'id8');
+insert into COLECCION (id, nombre_coleccion, id_genero, id_tipo) values ('057113CO', 'Psicologia', '089432GE', 'id1');
+insert into COLECCION (id, nombre_coleccion, id_genero, id_tipo) values ('057114CO', 'Drama', '089166GE', 'id1');
+insert into COLECCION (id, nombre_coleccion, id_genero, id_tipo) values ('057115CO', 'Suspenso', '089958GE', 'id4');
+insert into COLECCION (id, nombre_coleccion, id_genero, id_tipo) values ('057116CO', 'Comedia', '089636GE', 'id5');
+insert into COLECCION (id, nombre_coleccion, id_genero, id_tipo) values ('057117CO', 'Tutorial', '089432GE', 'id3');
+insert into COLECCION (id, nombre_coleccion, id_genero, id_tipo) values ('057118CO', 'Infantil', '089641GE', 'id8');
+insert into COLECCION (id, nombre_coleccion, id_genero, id_tipo) values ('057119CO', 'Auto-ayuda', '089636GE', 'id2');
+insert into COLECCION (id, nombre_coleccion, id_genero, id_tipo) values ('057120CO', 'Matematicas', '089376GE', 'id7');
+insert into COLECCION (id, nombre_coleccion, id_genero, id_tipo) values ('057121CO', 'Sociales', '089641GE', 'id8');
+insert into COLECCION (id, nombre_coleccion, id_genero, id_tipo) values ('057122CO', 'Ciencias', '089590GE', 'id4');
+GO
+insert into MATERIAL_BIBLIOGRAFICO (id, id_coleccion) values ('0012801bl', '057100CO');
+insert into MATERIAL_BIBLIOGRAFICO (id, id_coleccion) values ('0012802bl', '057101CO');
+insert into MATERIAL_BIBLIOGRAFICO (id, id_coleccion) values ('0012803bl', '057102CO');
+insert into MATERIAL_BIBLIOGRAFICO (id, id_coleccion) values ('0012804bl', '057103CO');
+insert into MATERIAL_BIBLIOGRAFICO (id, id_coleccion) values ('0012805bl', '057104CO');
+insert into MATERIAL_BIBLIOGRAFICO (id, id_coleccion) values ('0012806bl', '057105CO');
+insert into MATERIAL_BIBLIOGRAFICO (id, id_coleccion) values ('0012807bl', '057106CO');
+insert into MATERIAL_BIBLIOGRAFICO (id, id_coleccion) values ('0012808bl', '057107CO');
+insert into MATERIAL_BIBLIOGRAFICO (id, id_coleccion) values ('0012809bl', '057108CO');
+insert into MATERIAL_BIBLIOGRAFICO (id, id_coleccion) values ('0012810bl', '057109CO');
+insert into MATERIAL_BIBLIOGRAFICO (id, id_coleccion) values ('0012811bl', '057110CO');
+insert into MATERIAL_BIBLIOGRAFICO (id, id_coleccion) values ('0012812bl', '057111CO');
+insert into MATERIAL_BIBLIOGRAFICO (id, id_coleccion) values ('0012813bl', '057112CO');
+insert into MATERIAL_BIBLIOGRAFICO (id, id_coleccion) values ('0012814bl', '057113CO');
+insert into MATERIAL_BIBLIOGRAFICO (id, id_coleccion) values ('0012815bl', '057114CO');
+insert into MATERIAL_BIBLIOGRAFICO (id, id_coleccion) values ('0012816bl', '057115CO');
+insert into MATERIAL_BIBLIOGRAFICO (id, id_coleccion) values ('0012817bl', '057116CO');
+insert into MATERIAL_BIBLIOGRAFICO (id, id_coleccion) values ('0012818bl', '057117CO');
+insert into MATERIAL_BIBLIOGRAFICO (id, id_coleccion) values ('0012819bl', '057118CO');
+insert into MATERIAL_BIBLIOGRAFICO (id, id_coleccion) values ('0012820bl', '057119CO');
+insert into MATERIAL_BIBLIOGRAFICO (id, id_coleccion) values ('0012821bl', '057120CO');
+insert into MATERIAL_BIBLIOGRAFICO (id, id_coleccion) values ('0012822bl', '057121CO');
+insert into MATERIAL_BIBLIOGRAFICO (id, id_coleccion) values ('0012823bl', '057122CO');
+GO
 insert into EJEMPLAR (id, fecha_publicacion, id_autor, id_etiqueta, id_idioma, id_formato  , id_palabra_clave, id_editorial, Nombre, id_coleccion) values ('022100LB', CONVERT (DATE,'09/06/2022',103), '00219120', '000011', 2, 2, 'id1366', 'id4756', 'In This Our Life', '057112CO');
 insert into EJEMPLAR (id, fecha_publicacion, id_autor, id_etiqueta, id_idioma, id_formato  , id_palabra_clave, id_editorial, Nombre, id_coleccion) values ('022101LB', CONVERT (DATE,'15/08/1960',103), '00219180', '000012', 2, 2, 'id2852', 'id4762', 'Solo Sunny', '057104CO');
 insert into EJEMPLAR (id, fecha_publicacion, id_autor, id_etiqueta, id_idioma, id_formato  , id_palabra_clave, id_editorial, Nombre, id_coleccion) values ('022102LB', CONVERT (DATE,'01/12/1976',103), '00219133', '000011', 2, 2, 'id4685', 'id2624', 'Little Trip to Heaven, A', '057106CO');
@@ -744,85 +824,12 @@ insert into EJEMPLAR (id, fecha_publicacion, id_autor, id_etiqueta, id_idioma, i
 insert into EJEMPLAR (id, fecha_publicacion, id_autor, id_etiqueta, id_idioma, id_formato  , id_palabra_clave, id_editorial, Nombre, id_coleccion) values ('022599LB', CONVERT (DATE,'16/12/1963',103), '00219125', '000013', 1, 2, 'id1504', 'id3387', 'Woodstock Diary', '057108CO');
 insert into EJEMPLAR (id, fecha_publicacion, id_autor, id_etiqueta, id_idioma, id_formato  , id_palabra_clave, id_editorial, Nombre, id_coleccion) values ('022600LB', CONVERT (DATE,'31/05/2000',103), '00219143', '000013', 2, 2, 'id1178', 'id2465', 'For No Good Reason', '057106CO');
 GO
-insert into PISO (id,piso) values ('007122P','Primer piso');
-insert into PISO (id,piso) values ('007123P','Segundo piso');
-insert into PISO (id,piso) values ('007124P','Tercer piso');
-insert into PISO (id,piso) values ('007125P','Cuarto piso');
-GO
-insert into GENERO (id, genero) values ('089470GE', 'Cuento');
-insert into GENERO (id, genero) values ('089989GE', 'epopeya');
-insert into GENERO (id, genero) values ('089679GE', 'novela');
-insert into GENERO (id, genero) values ('089805GE', 'poema épico');
-insert into GENERO (id, genero) values ('089947GE', 'cantares de gesta');
-insert into GENERO (id, genero) values ('089291GE', 'fábula');
-insert into GENERO (id, genero) values ('089464GE', 'leyendas');
-insert into GENERO (id, genero) values ('089304GE', 'romances líricos');
-insert into GENERO (id, genero) values ('089488GE', 'epístola');
-insert into GENERO (id, genero) values ('089721GE', 'Poema');
-insert into GENERO (id, genero) values ('089432GE', 'oda');
-insert into GENERO (id, genero) values ('089980GE', 'sonetos');
-insert into GENERO (id, genero) values ('089929GE', 'elegía');
-insert into GENERO (id, genero) values ('089641GE', 'égloga sátira');
-insert into GENERO (id, genero) values ('089125GE', 'himnos');
-insert into GENERO (id, genero) values ('089439GE', 'Teatro');
-insert into GENERO (id, genero) values ('089385GE', 'drama');
-insert into GENERO (id, genero) values ('089590GE', 'comedia');
-insert into GENERO (id, genero) values ('089166GE', 'amor');
-insert into GENERO (id, genero) values ('089958GE', 'ópera');
-insert into GENERO (id, genero) values ('089636GE', 'melodrama');
-insert into GENERO (id, genero) values ('089686GE', 'farsa');
-insert into GENERO (id, genero) values ('089376GE', 'tragedia');
-insert into GENERO (id, genero) values ('089803GE', 'Ensayo');
-insert into GENERO (id, genero) values ('089834GE', 'manuales');
-GO
-insert into COLECCION (id, nombre_coleccion, id_genero, id_tipo) values ('057100CO', 'Ciencias', '089947GE', 'id8');
-insert into COLECCION (id, nombre_coleccion, id_genero, id_tipo) values ('057101CO', 'Lenguaje', '089980GE', 'id3');
-insert into COLECCION (id, nombre_coleccion, id_genero, id_tipo) values ('057102CO', 'Musica', '089488GE', 'id4');
-insert into COLECCION (id, nombre_coleccion, id_genero, id_tipo) values ('057103CO', 'Diseño', '089470GE', 'id8');
-insert into COLECCION (id, nombre_coleccion, id_genero, id_tipo) values ('057104CO', 'Arquitectura', '089488GE', 'id1');
-insert into COLECCION (id, nombre_coleccion, id_genero, id_tipo) values ('057105CO', 'Sexual', '089989GE', 'id7');
-insert into COLECCION (id, nombre_coleccion, id_genero, id_tipo) values ('057106CO', 'Programacion', '089803GE', 'id1');
-insert into COLECCION (id, nombre_coleccion, id_genero, id_tipo) values ('057107CO', 'Mecanica', '089686GE', 'id1');
-insert into COLECCION (id, nombre_coleccion, id_genero, id_tipo) values ('057108CO', 'Electronica', '089376GE', 'id2');
-insert into COLECCION (id, nombre_coleccion, id_genero, id_tipo) values ('057109CO', 'Liderzgo', '089125GE', 'id2');
-insert into COLECCION (id, nombre_coleccion, id_genero, id_tipo) values ('057110CO', 'Manga', '089929GE', 'id3');
-insert into COLECCION (id, nombre_coleccion, id_genero, id_tipo) values ('057111CO', 'Miedo', '089721GE', 'id2');
-insert into COLECCION (id, nombre_coleccion, id_genero, id_tipo) values ('057112CO', 'Ingenieria', '089679GE', 'id8');
-insert into COLECCION (id, nombre_coleccion, id_genero, id_tipo) values ('057113CO', 'Psicologia', '089432GE', 'id1');
-insert into COLECCION (id, nombre_coleccion, id_genero, id_tipo) values ('057114CO', 'Drama', '089166GE', 'id1');
-insert into COLECCION (id, nombre_coleccion, id_genero, id_tipo) values ('057115CO', 'Suspenso', '089958GE', 'id4');
-insert into COLECCION (id, nombre_coleccion, id_genero, id_tipo) values ('057116CO', 'Comedia', '089636GE', 'id5');
-insert into COLECCION (id, nombre_coleccion, id_genero, id_tipo) values ('057117CO', 'Tutorial', '089432GE', 'id3');
-insert into COLECCION (id, nombre_coleccion, id_genero, id_tipo) values ('057118CO', 'Infantil', '089641GE', 'id8');
-insert into COLECCION (id, nombre_coleccion, id_genero, id_tipo) values ('057119CO', 'Auto-ayuda', '089636GE', 'id2');
-insert into COLECCION (id, nombre_coleccion, id_genero, id_tipo) values ('057120CO', 'Matematicas', '089376GE', 'id7');
-insert into COLECCION (id, nombre_coleccion, id_genero, id_tipo) values ('057121CO', 'Sociales', '089641GE', 'id8');
-insert into COLECCION (id, nombre_coleccion, id_genero, id_tipo) values ('057122CO', 'Ciencias', '089590GE', 'id4');
-GO
-insert into MATERIAL_BIBLIOGRAFICO (id, id_coleccion) values ('0012801bl', '057100CO');
-insert into MATERIAL_BIBLIOGRAFICO (id, id_coleccion) values ('0012802bl', '057101CO');
-insert into MATERIAL_BIBLIOGRAFICO (id, id_coleccion) values ('0012803bl', '057102CO');
-insert into MATERIAL_BIBLIOGRAFICO (id, id_coleccion) values ('0012804bl', '057103CO');
-insert into MATERIAL_BIBLIOGRAFICO (id, id_coleccion) values ('0012805bl', '057104CO');
-insert into MATERIAL_BIBLIOGRAFICO (id, id_coleccion) values ('0012806bl', '057105CO');
-insert into MATERIAL_BIBLIOGRAFICO (id, id_coleccion) values ('0012807bl', '057106CO');
-insert into MATERIAL_BIBLIOGRAFICO (id, id_coleccion) values ('0012808bl', '057107CO');
-insert into MATERIAL_BIBLIOGRAFICO (id, id_coleccion) values ('0012809bl', '057108CO');
-insert into MATERIAL_BIBLIOGRAFICO (id, id_coleccion) values ('0012810bl', '057109CO');
-insert into MATERIAL_BIBLIOGRAFICO (id, id_coleccion) values ('0012811bl', '057110CO');
-insert into MATERIAL_BIBLIOGRAFICO (id, id_coleccion) values ('0012812bl', '057111CO');
-insert into MATERIAL_BIBLIOGRAFICO (id, id_coleccion) values ('0012813bl', '057112CO');
-insert into MATERIAL_BIBLIOGRAFICO (id, id_coleccion) values ('0012814bl', '057113CO');
-insert into MATERIAL_BIBLIOGRAFICO (id, id_coleccion) values ('0012815bl', '057114CO');
-insert into MATERIAL_BIBLIOGRAFICO (id, id_coleccion) values ('0012816bl', '057115CO');
-insert into MATERIAL_BIBLIOGRAFICO (id, id_coleccion) values ('0012817bl', '057116CO');
-insert into MATERIAL_BIBLIOGRAFICO (id, id_coleccion) values ('0012818bl', '057117CO');
-insert into MATERIAL_BIBLIOGRAFICO (id, id_coleccion) values ('0012819bl', '057118CO');
-insert into MATERIAL_BIBLIOGRAFICO (id, id_coleccion) values ('0012820bl', '057119CO');
-insert into MATERIAL_BIBLIOGRAFICO (id, id_coleccion) values ('0012821bl', '057120CO');
-insert into MATERIAL_BIBLIOGRAFICO (id, id_coleccion) values ('0012822bl', '057121CO');
-insert into MATERIAL_BIBLIOGRAFICO (id, id_coleccion) values ('0012823bl', '057122CO');
-GO
+
+insert into ADMINISTRADOR (Id, Nombre, Contraseña) values ('00133221', 'Richard', 'X3sq8SAqaT');
+insert into ADMINISTRADOR (Id, Nombre, Contraseña) values ('00052121', 'Robles', 'oRIGXF1R');
+insert into ADMINISTRADOR (Id, Nombre, Contraseña) values ('00139121', 'Alejo', 'SHwQOct7');
+insert into ADMINISTRADOR (Id, Nombre, Contraseña) values ('00150721', 'Tony', 'qSLXjEX2e');
+
 insert into AREA (id, horario, id_piso, id_material_bibliografico, id_responsable, descripcion , nombre) values ('009701', 'lunes a domingo de 8:00 am a 12:pm', '007122P', '0012819bl', '00133221', 'descripcion', 'Salones lúdicos');
 insert into AREA (id, horario, id_piso, id_material_bibliografico, id_responsable, descripcion , nombre) values ('009702', 'lunes a domingo de 8:00 am a 12:pm', '007123P', '0012819bl', '00133221', 'descripcion', 'Salones lúdicos');
 
@@ -847,7 +854,13 @@ insert into AREA (id, horario, id_piso, id_material_bibliografico, id_responsabl
 
 insert into AREA (id, horario, id_piso, id_material_bibliografico, id_responsable, descripcion , nombre) values ('009718', 'lunes a domingo de 8:00 am a 12:pm', '007125P', '0012804bl', '00052121', 'descripcion', 'Sala de investigación');
 
-insert into AREA (id, horario, id_piso, id_material_bibliografico, id_responsable, descripcion , nombre) values ('009717', 'lunes a domingo de 8:00 am a 12:pm', '007125P', '0012801bl', '00052121', 'descripcion', 'Sala de investigación');
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+insert into AREA (id, horario, id_piso, id_material_bibliografico , id_material_bibliografico, id_responsable, descripcion , nombre) values ('009717', 'lunes a domingo de 8:00 am a 12:pm', '007125P', '0012801bl', '0012802bl', '00052121', 'descripcion', 'Sala de investigación');
+insert into AREA (id, id_material_bibliografico) values ('009717', '0012801bl');
+
+
+
 insert into AREA (id, horario, id_piso, id_material_bibliografico, id_responsable, descripcion , nombre) values ('009717', 'lunes a domingo de 8:00 am a 12:pm', '007125P', '0012802bl', '00052121', 'descripcion', 'Sala de investigación');
 insert into AREA (id, horario, id_piso, id_material_bibliografico, id_responsable, descripcion , nombre) values ('009717', 'lunes a domingo de 8:00 am a 12:pm', '007125P', '0012803bl', '00052121', 'descripcion', 'Sala de investigación');
 insert into AREA (id, horario, id_piso, id_material_bibliografico, id_responsable, descripcion , nombre) values ('009717', 'lunes a domingo de 8:00 am a 12:pm', '007125P', '0012804bl', '00052121', 'descripcion', 'Sala de investigación');
@@ -883,11 +896,7 @@ insert into AREA (id, horario, id_piso, id_material_bibliografico, id_responsabl
 
 
 --ADMINISTRADOR
-GO
-insert into ADMINISTRADOR (Id, Nombre, Contraseña) values ('00133221', 'Richard', 'X3sq8SAqaT');
-insert into ADMINISTRADOR (Id, Nombre, Contraseña) values ('00052121', 'Robles', 'oRIGXF1R');
-insert into ADMINISTRADOR (Id, Nombre, Contraseña) values ('00139121', 'Alejo', 'SHwQOct7');
-insert into ADMINISTRADOR (Id, Nombre, Contraseña) values ('00150721', 'Tony', 'qSLXjEX2e');
+
 GO
 insert into INSTITUCION (id, Nombre) values ('0001910', 'Trilia');
 insert into INSTITUCION (id, Nombre) values ('0001911', 'Yambee');
