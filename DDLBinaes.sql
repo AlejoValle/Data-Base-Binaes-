@@ -48,7 +48,8 @@ GO
         id_formato                CHAR      (100)             NOT NULL,
         id_palabra_clave          CHAR      (100)             NOT NULL,
         id_foto                   CHAR      (100)                     ,
-        id_editorial              CHAR      (100)             NOT NULL
+        id_editorial              CHAR      (100)             NOT NULL,
+        id_coleccion              CHAR      (100)             NOT NULL
     );
 GO
     CREATE TABLE GENERO(
@@ -65,8 +66,7 @@ GO
         id                        CHAR      (100) PRIMARY KEY NOT NULL,
         nombre_coleccion          VARCHAR   (100)             NOT NULL,
         id_genero                 CHAR      (100)             NOT NULL,
-        id_tipo                   CHAR      (100)             NOT NULL,
-        id_ejemplar               CHAR      (100)             NOT NULL
+        id_tipo                   CHAR      (100)             NOT NULL
     );
 GO
     CREATE TABLE MATERIAL_BIBLIOGRAFICO(
@@ -80,7 +80,7 @@ GO
         descripcion               VARCHAR   (100)             NOT NULL,
         horario                   VARCHAR   (100)             NOT NULL,
         id_piso                   CHAR      (100)             NOT NULL,
-        id_material_bibliografico CHAR      (100)             NOT NULL,
+        id_material_bibliografico CHAR      (100)                     ,
         id_responsable            CHAR      (100)             NOT NULL
     );
 GO
@@ -180,10 +180,10 @@ ALTER TABLE EJEMPLAR               ADD FOREIGN KEY (id_foto)                    
 ALTER TABLE EJEMPLAR               ADD FOREIGN KEY (id_editorial)                    REFERENCES EDITORIAL (id);
 ALTER TABLE EJEMPLAR               ADD FOREIGN KEY (id_etiqueta)                     REFERENCES ETIQUETA (id);
 ALTER TABLE EJEMPLAR               ADD FOREIGN KEY (id_autor)                        REFERENCES AUTOR (id);
+ALTER TABLE EJEMPLAR               ADD FOREIGN KEY (id_coleccion)                    REFERENCES COLECCION (id);
 GO
 ALTER TABLE COLECCION              ADD FOREIGN KEY (id_tipo)                         REFERENCES TIPO (id);
 ALTER TABLE COLECCION              ADD FOREIGN KEY (id_genero)                       REFERENCES GENERO (id);
-ALTER TABLE COLECCION              ADD FOREIGN KEY (id_ejemplar)                     REFERENCES EJEMPLAR (id);
 GO
 ALTER TABLE MATERIAL_BIBLIOGRAFICO ADD FOREIGN KEY (id_coleccion)                    REFERENCES COLECCION (id);
 GO
