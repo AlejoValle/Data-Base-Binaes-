@@ -192,7 +192,7 @@ GO
 ALTER TABLE AREA                   ADD FOREIGN KEY (id_piso)                         REFERENCES PISO (id);
 ALTER TABLE AREA                   ADD FOREIGN KEY (id_responsable)                  REFERENCES ADMINISTRADOR (id);
 GO
-ALTER TABLE GESTIONA_AM            ADD CONSTRAINT pk_gestiona_AM                     PRIMARY KEY (id_administrador, id_area);                  
+ALTER TABLE GESTIONA_AM            ADD CONSTRAINT pk_gestiona_AM                     PRIMARY KEY (id_administrador, id_coleccion);                  
 ALTER TABLE GESTIONA_AM            ADD FOREIGN KEY (id_administrador)                REFERENCES ADMINISTRADOR (id);
 ALTER TABLE GESTIONA_AM            ADD FOREIGN KEY (id_coleccion)                    REFERENCES COLECCION (id);
 GO
