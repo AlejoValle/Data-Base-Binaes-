@@ -90,7 +90,7 @@ GO
 GO
     CREATE TABLE GESTIONA_AM(
         id_administrador          CHAR      (100)             NOT NULL,
-        id_area CHAR      (100)             NOT NULL
+        id_coleccion               CHAR      (100)             NOT NULL
     );
 GO
     CREATE TABLE PRESTAMO(
@@ -194,7 +194,7 @@ ALTER TABLE AREA                   ADD FOREIGN KEY (id_responsable)             
 GO
 ALTER TABLE GESTIONA_AM            ADD CONSTRAINT pk_gestiona_AM                     PRIMARY KEY (id_administrador, id_area);                  
 ALTER TABLE GESTIONA_AM            ADD FOREIGN KEY (id_administrador)                REFERENCES ADMINISTRADOR (id);
-ALTER TABLE GESTIONA_AM            ADD FOREIGN KEY (id_area)                         REFERENCES AREA (id);
+ALTER TABLE GESTIONA_AM            ADD FOREIGN KEY (id_coleccion)                    REFERENCES COLECCION (id);
 GO
 ALTER TABLE PRESTAMO               ADD CONSTRAINT pk_gestiona                        PRIMARY KEY (id_cliente,id_ejemplar );                  
 ALTER TABLE PRESTAMO               ADD FOREIGN KEY (id_cliente)                      REFERENCES CLIENTE (id);
@@ -204,7 +204,7 @@ ALTER TABLE RESERVA_LIBRO          ADD CONSTRAINT pk_reseva_libro               
 ALTER TABLE RESERVA_LIBRO          ADD FOREIGN KEY (id_cliente)                      REFERENCES CLIENTE (id);
 ALTER TABLE RESERVA_LIBRO          ADD FOREIGN KEY (id_ejemplar)                     REFERENCES EJEMPLAR (id);
 GO
-ALTER TABLE UTILIZA                ADD CONSTRAINT pk_utiliza_libro                   PRIMARY KEY (id_cliente, id_area);
+ALTER TABLE UTILIZA                ADD CONSTRAINT pk_utiliza                         PRIMARY KEY (id_cliente, id_area);
 ALTER TABLE UTILIZA                ADD FOREIGN KEY (id_cliente)                      REFERENCES CLIENTE (id);
 ALTER TABLE UTILIZA                ADD FOREIGN KEY (id_area)                         REFERENCES AREA (id);
 GO
